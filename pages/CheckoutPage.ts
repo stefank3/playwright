@@ -11,12 +11,10 @@ export default class CheckoutPage {
 
     
     async navigateToCheckoutScreen(): Promise<void> {
-    const checkoutButton = await this.page.$('checkout');
-    if(checkoutButton){
-        checkoutButton.click();
-    }else{
-        console.log('Element not found');
-        }
+
+    const checkoutButton = await this.page.waitForSelector('#checkout', { state: 'visible' });
+     await checkoutButton.click();
+    
     
     }
 
@@ -31,22 +29,14 @@ export default class CheckoutPage {
      }
 
     async navigateToConfirmationScreen(): Promise<void> {
-        const continueButton = await this.page.$('continue');
-        if(continueButton){
-            continueButton.click();
-        }else{
-            console.log('Element not found');
-            }
-        
+        const continueButton = await this.page.waitForSelector('#continue', { state: 'visible' });
+           await continueButton.click();
+
         }
 
         async finishCheckout(): Promise<void> {
-            const finishButton = await this.page.$('finish');
-            if(finishButton){
-                finishButton.click();
-            }else{
-                console.log('Element not found');
-                }
+            const finishButton = await this.page.waitForSelector('#finish', { state: 'visible' });
+            await finishButton.click();
             
             }
 

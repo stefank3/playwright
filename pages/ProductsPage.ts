@@ -73,21 +73,14 @@ export default class ProductsPage {
 
        async addProductToCart(): Promise<void>{
         const addBackPack = await this.page.waitForSelector("button[name=\"add-to-cart-sauce-labs-backpack\"]", { state: 'visible' });
-        if(addBackPack){
-            addBackPack.click();
-        }else{
-            console.log('Element not found');
-        }
+        await addBackPack.click();
 
        }
 
        async navigateToCart(): Promise<void>{
         const navigateToCart = await this.page.waitForSelector("//*[@id=\"shopping_cart_container\"]/a", { state: 'visible' });
-        if(navigateToCart){
-            navigateToCart.click();
-        }else{
-            console.log('Element not found');
-        }
+        await navigateToCart.click();
+   
        }
 
    } 

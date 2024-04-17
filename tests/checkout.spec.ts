@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 import ProductsPage from '../pages/ProductsPage';
 import LoginPage from '../pages/LoginPage';
 import CheckoutPage from '../pages/CheckoutPage';
-import { checkPrime } from 'crypto';
+
 
 test('Verify Checkout successfully', async ({ page }) => {
     const productsPage = new ProductsPage(page);

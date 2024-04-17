@@ -1,5 +1,5 @@
 //CheckoutPage
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import ProductsPage from '../pages/ProductsPage';
 import LoginPage from '../pages/LoginPage';
 import CheckoutPage from '../pages/CheckoutPage';

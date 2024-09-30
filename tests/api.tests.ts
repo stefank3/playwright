@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import ApiHelper from '../utils/ApiHelper';
+import ApiHelper from '../utils/apiHelper.ts';
 
 test.describe('API Tests with Playwright', () => {
   

@@ -12,7 +12,7 @@ test.describe('API Tests with Playwright', () => {
     
     const responseBody = await response.json();
     expect(responseBody).toHaveProperty('token');
-    expect(responseBody.username).toBe('kminchelle');
+    expect(responseBody.username).toBe('emilys');
   });
 
   test('Unsuccessful login via API', async ({ request }) => {

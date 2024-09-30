@@ -7,7 +7,7 @@ test.describe('API Tests with Playwright', () => {
     const apiHelper = new ApiHelper(request);
 
     // Perform a login using the API
-    const response = await apiHelper.login('kminchelle', '0lelplR');
+    const response = await apiHelper.login('emilys', 'emilyspass');
     expect(response.status()).toBe(200);
     
     const responseBody = await response.json();
